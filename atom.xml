@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Jamzy1.github.io/"/>
-  <updated>2019-07-23T16:45:21.121Z</updated>
+  <updated>2019-07-24T04:36:40.643Z</updated>
   <id>http://Jamzy1.github.io/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="http://Jamzy1.github.io/2019/07/23/MfirstB/"/>
     <id>http://Jamzy1.github.io/2019/07/23/MfirstB/</id>
     <published>2019-07-23T15:20:05.000Z</published>
-    <updated>2019-07-23T16:45:21.121Z</updated>
+    <updated>2019-07-24T04:36:40.643Z</updated>
     
-    <content type="html"><![CDATA[<p>  第一次用hexo搭建自己的博客，这也是我的第一篇文章，这几天刚刚搭建完，想把自己的流程和遇到的问题分享出来，如果写得不好或者大家有更好的建议，可以随时联系我。<br>  这里先简单介绍博客 | 博客相当于一个私人的静态网站（百度词条：<a href="https://baike.baidu.com/item/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/2776875?fr=aladdin），" target="_blank" rel="noopener">https://baike.baidu.com/item/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/2776875?fr=aladdin），</a><br>  思路与流程：将写好的md文件解析成静态文件后放在托管空间（github）上，</p>]]></content>
+    <content type="html"><![CDATA[<p>  第一次用hexo搭建自己的博客，这也是我的第一篇文章，这几天刚刚搭建完，想把自己的流程和遇到的问题分享出来，如果写得不好或者大家有更好的建议，可以随时联系我。<a id="more"></a><br>  这里先简单介绍博客 | 博客相当于一个私人的静态网站（百度词条：<a href="https://baike.baidu.com/item/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/2776875?fr=aladdin），" target="_blank" rel="noopener">https://baike.baidu.com/item/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/2776875?fr=aladdin），</a><br>  思路与流程：将写好的md文件解析成静态文件后放在托管空间（github）上，</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;  第一次用hexo搭建自己的博客，这也是我的第一篇文章，这几天刚刚搭建完，想把自己的流程和遇到的问题分享出来，如果写得不好或者大家有更好的建议，可以随时联系我。&lt;br&gt;  这里先简单介绍博客 | 博客相当于一个私人的静态网站（百度词条：&lt;a href=&quot;https://b
-      
+      &lt;p&gt;  第一次用hexo搭建自己的博客，这也是我的第一篇文章，这几天刚刚搭建完，想把自己的流程和遇到的问题分享出来，如果写得不好或者大家有更好的建议，可以随时联系我。
     
     </summary>
     
