@@ -36,7 +36,7 @@
     </summary>
     
     
-      <category term="weekdiary" scheme="http://Jamzy1.github.io/categoryies/weekdiary/"/>
+      <category term="weekdiary" scheme="http://Jamzy1.github.io/categories/weekdiary/"/>
     
     
   </entry>
@@ -61,7 +61,7 @@
     </summary>
     
     
-      <category term="生活" scheme="http://Jamzy1.github.io/categoryies/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://Jamzy1.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
   </entry>
@@ -86,7 +86,7 @@
     </summary>
     
     
-      <category term="学习" scheme="http://Jamzy1.github.io/categoryies/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://Jamzy1.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
   </entry>
