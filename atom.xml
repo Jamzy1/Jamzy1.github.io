@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Jamzy1.github.io/"/>
-  <updated>2019-10-25T12:13:22.102Z</updated>
+  <updated>2020-02-08T02:42:53.216Z</updated>
   <id>http://Jamzy1.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JAVA 异常处理</title>
+    <link href="http://Jamzy1.github.io/2020/02/07/JAVA-Exception/"/>
+    <id>http://Jamzy1.github.io/2020/02/07/JAVA-Exception/</id>
+    <published>2020-02-07T04:09:58.409Z</published>
+    <updated>2020-02-08T02:42:53.216Z</updated>
+    
+    <content type="html"><![CDATA[ <a id="more"></a><h2 id="异常处理机制"><a href="#异常处理机制" class="headerlink" title="异常处理机制"></a>异常处理机制</h2><p> 每当JAVA程序运行过程中发生一个可识别的运行错误时，即该错误有一个异常类（最上层Java.lang.Throwable包括两个子类,无法捕捉的Java.lang.Error和Java.lang.Exception）与之对应时，系统都会产生一个相应的给异常类的对象。一旦一个异常对象产生了，系统中就一定有相应的机制来处理它，从而保证整个程序运行的安全性。这就是JAVA异常处理机制。</p><h2 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h2><p> 生成异常对象并把它交给运行系统的过程称为抛出异常。在没有任何的处理情况下异常对象会自动的抛给调用端，调用端接收到这个异常对象，由于调用端也没有任何处理，则继续向上抛出给JVM，JVM会打印这个异常对象。</p><h2 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h2><p> <img src="http://q5d3u8yik.bkt.clouddn.com/try.png" alt="avatar"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+         &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;异常处理机制&quot;&gt;&lt;a href=&quot;#异常处理机制&quot; class=&quot;headerlink&quot; title=&quot;异常处理机制&quot;&gt;&lt;/a&gt;异常处理机制&lt;/h2&gt;&lt;p&gt; 每当JAVA程序运行过程中发生一个可识别的运行错误时，即该错误有一个
+      
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://Jamzy1.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>something about my summer vacation</title>
@@ -71,7 +96,7 @@
     <link href="http://Jamzy1.github.io/2019/10/24/MfirstB/"/>
     <id>http://Jamzy1.github.io/2019/10/24/MfirstB/</id>
     <published>2019-10-24T08:58:35.000Z</published>
-    <updated>2019-08-18T03:15:22.000Z</updated>
+    <updated>2020-02-07T05:16:57.739Z</updated>
     
     <content type="html"><![CDATA[ <a id="more"></a><h2 id="我对学习的看法"><a href="#我对学习的看法" class="headerlink" title="我对学习的看法"></a>我对学习的看法</h2><p>&emsp;&emsp;首先我觉得学习是一件伴随终生的事情，因为只有持续的学习，你才能保持你学到的东西不忘记，其次才能取得更大的进步。<strong>简而言之，坚持学习是你在快速发展的时代下得以生存的根本</strong>。因为在不断学习，所以我对“学习”的认知也会不断更新，这也是这篇文章会持续更新的原因。<br>&emsp;&emsp;不过主观上的学习，对我来说一直是一件非常难的事，于是总想着学习，不如想着要做点什么。所以我认为对一般人来说，<strong>在实现需求的过程中学习，是最持久高效的学习</strong>。比如说搭建这个博客网站，刚开始什么都不懂，搭建过程中你就会学到各种东西。所以如果想学一件东西，不妨先了解一下这件东西能解决什么问题，然后自己从问题下手，直到亲自把问题解决。</p><h2 id="我的学习计划"><a href="#我的学习计划" class="headerlink" title="我的学习计划"></a>我的学习计划</h2><p>&emsp;&emsp;这个博客将是记录我学习的载体，也是我学下去（寻找需求并解决需求）的动力。</p><ul><li><strong>每周日更新一篇全英文的周记</strong><br>&emsp;&emsp;记录本周学到的东西，以及做错的地方；然后再是记录心情与事情。</li><li><strong>每个月1号更新一篇这个月所学到的技术类博文</strong><br>&emsp;&emsp;记录是目前的第一目的，如果能被分享或者对你有帮助，那自然再好不过。</li><li><strong>遇到事情（热点时事）时，可以发表自己的观点博文</strong><br>&emsp;&emsp;把自己的观点发表出来，会使你发现自己逻辑上的漏洞，锻炼自己的思维逻辑能力。</li></ul>]]></content>
     
