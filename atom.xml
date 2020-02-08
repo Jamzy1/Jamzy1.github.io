@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Jamzy1.github.io/"/>
-  <updated>2020-02-08T03:34:43.249Z</updated>
+  <updated>2020-02-08T08:31:26.652Z</updated>
   <id>http://Jamzy1.github.io/</id>
   
   <author>
@@ -17,20 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JAVA 文件处理</title>
+    <title>JAVA 文件处理-Java.IO</title>
     <link href="http://Jamzy1.github.io/2020/02/08/JAVA-IO/"/>
     <id>http://Jamzy1.github.io/2020/02/08/JAVA-IO/</id>
     <published>2020-02-08T03:33:55.733Z</published>
-    <updated>2020-02-08T03:34:43.249Z</updated>
+    <updated>2020-02-08T08:31:26.652Z</updated>
     
-    <content type="html"><![CDATA[ <a id="more"></a>]]></content>
+    <content type="html"><![CDATA[ <a id="more"></a><h2 id="流"><a href="#流" class="headerlink" title="流"></a>流</h2><p> 流是指计算机各部件之间的数据流动。Java只针对流做处理，增强了程序的可移植性。<br> InputStream和OutpuStream通常用来处理“位流”，这种流通常被用来读写诸如图片、音频视频等二进制文件，而Reader和Writer类则是用来处理“字符流”，也就是文本文件。</p><ul><li>InputStream(字节输入流类)</li><li>OutputStream(字节输出流类)<br>文件输入输出流<br><img src="http://q5d3u8yik.bkt.clouddn.com/InputStream.png" alt="avatar"></li><li>Reader(字符输入流类)</li><li>Writer(字符输出流类)</li></ul>]]></content>
     
     <summary type="html">
     
       
       
          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
+&lt;h2 id=&quot;流&quot;&gt;&lt;a href=&quot;#流&quot; class=&quot;headerlink&quot; title=&quot;流&quot;&gt;&lt;/a&gt;流&lt;/h2&gt;&lt;p&gt; 流是指计算机各部件之间的数据流动。Java只针对流做处理，增强了程序的可移植性。&lt;br&gt; InputStre
       
     
     </summary>
@@ -42,11 +42,11 @@
   </entry>
   
   <entry>
-    <title>JAVA 异常处理</title>
+    <title>JAVA 异常处理-Exception</title>
     <link href="http://Jamzy1.github.io/2020/02/07/JAVA-Exception/"/>
     <id>http://Jamzy1.github.io/2020/02/07/JAVA-Exception/</id>
     <published>2020-02-07T04:09:58.409Z</published>
-    <updated>2020-02-08T03:45:02.333Z</updated>
+    <updated>2020-02-08T04:22:56.353Z</updated>
     
     <content type="html"><![CDATA[ <a id="more"></a><h2 id="异常处理机制"><a href="#异常处理机制" class="headerlink" title="异常处理机制"></a>异常处理机制</h2><p> 每当JAVA程序运行过程中发生一个可识别的运行错误时，即该错误有一个异常类（最上层Java.lang.Throwable包括两个子类,无法捕捉的Java.lang.Error和Java.lang.Exception）与之对应时，系统都会产生一个相应的给异常类的对象。一旦一个异常对象产生了，系统中就一定有相应的机制来处理它，从而保证整个程序运行的安全性。这就是JAVA异常处理机制。</p><h2 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h2><p> 生成异常对象并把它交给运行系统的过程称为抛出异常。在没有任何的处理情况下异常对象会自动的抛给调用端，调用端接收到这个异常对象，由于调用端也没有任何处理，则继续向上抛出给JVM，JVM会打印这个异常对象。<br> 1.在方法体内使用throw语句抛出异常对象<br> 2.在方法头部添加throws子句表示方法将抛出异常<br> 通过这两种方式抛出的异常，在方法中就不必编写try—catch程序段了，因为异常已经被抛到上层，所以交由调用此方法的程序来处理。当然方法体内也可以try-catch处理其他异常。</p><h2 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h2><p> <strong>异常的处理需要先抛出(系统自动抛出和指定方法抛出)，然后再进行捕捉</strong><br> <img src="http://q5d3u8yik.bkt.clouddn.com/try.png" alt="avatar"><br> finally里面适合做方法的资源关闭和首尾工作。方法遇到return形成返回值，后续再修改不会改变返回值;finally是唯一一个可以return一次后还能再return一次的代码块，可以修改方法返回值。<br> RuntimeException可以不编写异常处理的程序代码，仍然可以编译成功，它是在程序运行时才可能发生；而IOException一定要进行捕捉处理才行，它通常用来处理与输入输出有关的操作。</p>]]></content>
     
