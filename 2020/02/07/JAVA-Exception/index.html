@@ -90,7 +90,7 @@
 <meta property="og:description" content="异常处理机制 每当JAVA程序运行过程中发生一个可识别的运行错误时，即该错误有一个异常类（最上层Java.lang.Throwable包括两个子类,无法捕捉的Java.lang.Error和Java.lang.Exception）与之对应时，系统都会产生一个相应的给异常类的对象。一旦一个异常对象产生了，系统中就一定有相应的机制来处理它，从而保证整个程序运行的安全性。这就是JAVA异常处理机制。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;try.png">
-<meta property="og:updated_time" content="2020-02-08T02:42:53.216Z">
+<meta property="og:updated_time" content="2020-02-08T03:32:31.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;try.png">
 
@@ -345,7 +345,9 @@
          <a id="more"></a>
 <h2 id="异常处理机制"><a href="#异常处理机制" class="headerlink" title="异常处理机制"></a>异常处理机制</h2><p> 每当JAVA程序运行过程中发生一个可识别的运行错误时，即该错误有一个异常类（最上层Java.lang.Throwable包括两个子类,无法捕捉的Java.lang.Error和Java.lang.Exception）与之对应时，系统都会产生一个相应的给异常类的对象。一旦一个异常对象产生了，系统中就一定有相应的机制来处理它，从而保证整个程序运行的安全性。这就是JAVA异常处理机制。</p>
 <h2 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h2><p> 生成异常对象并把它交给运行系统的过程称为抛出异常。在没有任何的处理情况下异常对象会自动的抛给调用端，调用端接收到这个异常对象，由于调用端也没有任何处理，则继续向上抛出给JVM，JVM会打印这个异常对象。</p>
-<h2 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h2><p> <img src="http://q5d3u8yik.bkt.clouddn.com/try.png" alt="avatar"></p>
+<h2 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h2><p> <strong>异常的处理需要先抛出(系统自动抛出和指定方法抛出)后捕捉</strong></p>
+<h4 id="抛出异常-1"><a href="#抛出异常-1" class="headerlink" title="抛出异常"></a>抛出异常</h4><p> 1.在方法体内使用throw语句抛出异常对象<br> 2.在方法头部添加throws子句表示方法将抛出异常<br> 通过这两种方式抛出的异常，在方法中就不必编写try—catch程序段了，因为异常已经被抛到上层，所以交由调用此方法的程序来处理。当然方法体内也可以try-catch处理其他异常。</p>
+<h4 id="捕捉异常"><a href="#捕捉异常" class="headerlink" title="捕捉异常"></a>捕捉异常</h4><p> <img src="http://q5d3u8yik.bkt.clouddn.com/try.png" alt="avatar"><br> finally里面适合做方法的资源关闭和首尾工作。方法遇到return形成返回值，后续再修改不会改变返回值;finally是唯一一个可以return一次后还能再return一次的代码块，可以修改方法返回值。<br> RuntimeException可以不编写异常处理的程序代码，仍然可以编译成功，它是在程序运行时才可能发生；而IOException一定要进行捕捉处理才行，它通常用来处理与输入输出有关的操作。</p>
 
       
     </div>
@@ -540,7 +542,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理机制"><span class="nav-number">1.</span> <span class="nav-text">异常处理机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抛出异常"><span class="nav-number">2.</span> <span class="nav-text">抛出异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理异常"><span class="nav-number">3.</span> <span class="nav-text">处理异常</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理机制"><span class="nav-number">1.</span> <span class="nav-text">异常处理机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抛出异常"><span class="nav-number">2.</span> <span class="nav-text">抛出异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理异常"><span class="nav-number">3.</span> <span class="nav-text">处理异常</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#抛出异常-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">抛出异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#捕捉异常"><span class="nav-number">3.0.2.</span> <span class="nav-text">捕捉异常</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
