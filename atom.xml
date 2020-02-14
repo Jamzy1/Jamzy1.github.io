@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Jamzy1.github.io/"/>
-  <updated>2020-02-13T16:07:59.904Z</updated>
+  <updated>2020-02-14T12:57:55.595Z</updated>
   <id>http://Jamzy1.github.io/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JAVA 泛型</title>
+    <link href="http://Jamzy1.github.io/2020/02/14/JAVA-%E6%B3%9B%E5%9E%8B/"/>
+    <id>http://Jamzy1.github.io/2020/02/14/JAVA-泛型/</id>
+    <published>2020-02-14T04:53:06.310Z</published>
+    <updated>2020-02-14T12:57:55.595Z</updated>
+    
+    <content type="html"><![CDATA[ <a id="more"></a><h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><ul><li>泛型类：泛型也称为参数多态，在使用泛型定义的类创建对象时(泛型实例化)，可以根据不同的需求给出类型参数T的具体类型，必须是引用类型(类类型)。<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName&lt;T</span> <span class="keyword">extends</span> <span class="title">anyClass&gt;</span>  <span class="title">限制泛型的可用类型，无论anyClass是类还是接口，都用extends关键字。</span></span></span><br></pre></td></tr></table></figure></li><li>泛型方法：泛型方法与其所在的类是否是泛型类没有关系。泛型方法的返回值和其参数类型应该都是泛型而且类型应该一致。<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; 返回值类型 方法名 (T 参数)&#123;&#125;</span><br></pre></td></tr></table></figure></li><li>泛型的类型通配符：一是用于创建可从新赋值但不可修改的其内容的泛型对象；二是用在方法的参数中，限制传入不想要的类型实参。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+         &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;泛型&quot;&gt;&lt;a href=&quot;#泛型&quot; class=&quot;headerlink&quot; title=&quot;泛型&quot;&gt;&lt;/a&gt;泛型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;泛型类：泛型也称为参数多态，在使用泛型定义的类创建对象时(泛型实例化)，可以根据不同的需求
+      
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://Jamzy1.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>JAVA 多线程</title>
     <link href="http://Jamzy1.github.io/2020/02/09/JAVA-%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     <id>http://Jamzy1.github.io/2020/02/09/JAVA-多线程/</id>
     <published>2020-02-09T03:01:25.408Z</published>
-    <updated>2020-02-13T16:07:59.904Z</updated>
+    <updated>2020-02-14T05:04:41.860Z</updated>
     
-    <content type="html"><![CDATA[ <a id="more"></a><h2 id="实现线程的两种方式"><a href="#实现线程的两种方式" class="headerlink" title="实现线程的两种方式"></a>实现线程的两种方式</h2><p> 1.继承java.lang包中的Thread类<br> <img src="http://q5d3u8yik.bkt.clouddn.com/Thread.png" alt="avatar"><br> 2.用Runnable接口来创建线程<br> <img src="http://q5d3u8yik.bkt.clouddn.com/Runnable.png" alt="avatar"></p><h2 id="线程生命周期"><a href="#线程生命周期" class="headerlink" title="线程生命周期"></a>线程生命周期</h2><p> <img src="http://q5d3u8yik.bkt.clouddn.com/life.png" alt="avatar"></p><h2 id="线程的并发"><a href="#线程的并发" class="headerlink" title="线程的并发"></a>线程的并发</h2><p> 互斥锁：当线程A获得一个对象的互斥锁后，线程B若也想获得该对象的互斥锁，就必须等待线程A完成规定的操作并释放出互斥锁后，才能获得该对象的互斥锁，并执行线程B中的操作。<br> synchronized关键字：首先判断对象或方法的互斥锁是否在，若在就获得互斥锁，然后就可以执行紧随其后的临界代码段或方法体；如果对象或方法的互斥锁不在，就进入等待状态，直到获得互斥锁。<br> 1.多线程设计银行取款<br> <img src="http://q5d3u8yik.bkt.clouddn.com/xiancheng1.png" alt="avatar"><br> 2.synchronized同步语句<br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized1.png" alt="avatar"><br> 3.synchronized同步方法<br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized2.png" alt="avatar"></p><h2 id="线程之间的通信"><a href="#线程之间的通信" class="headerlink" title="线程之间的通信"></a>线程之间的通信</h2><p> 1.阻塞状态的线程一般情况下可由下列的情况所产生<br>    * 该线程调用对象的wait()方法；<br>    * 该线程本身调用了wait()方法；<br>    * 该线程和另一个线程join()在一起； //加入线程必须要在先执行的线程的start()后面调用join()才能先执行<br>    * 有优先级更高的线程处于就绪状态。<br> 2.解除阻塞的原因有<br>    * 如果线程是由调用对象的wait()方法所阻塞，则该对象的notify()方法被调用时可解除阻塞；<br>    * 线程进入睡眠(sleep)状态，但指定的睡眠时间到了。<br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized3.png" alt="avatar"><br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized4.png" alt="avatar"></p>]]></content>
+    <content type="html"><![CDATA[ <a id="more"></a><h2 id="实现线程的两种方式"><a href="#实现线程的两种方式" class="headerlink" title="实现线程的两种方式"></a>实现线程的两种方式</h2><p> 1.继承java.lang包中的Thread类<br> <img src="http://q5d3u8yik.bkt.clouddn.com/Thread.png" alt="avatar"><br> 2.用Runnable接口来创建线程<br> <img src="http://q5d3u8yik.bkt.clouddn.com/Runnable.png" alt="avatar"></p><h2 id="线程生命周期"><a href="#线程生命周期" class="headerlink" title="线程生命周期"></a>线程生命周期</h2><p> <img src="http://q5d3u8yik.bkt.clouddn.com/life.png" alt="avatar"></p><h2 id="线程的并发"><a href="#线程的并发" class="headerlink" title="线程的并发"></a>线程的并发</h2><p> 互斥锁：当线程A获得一个对象的互斥锁后，线程B若也想获得该对象的互斥锁，就必须等待线程A完成规定的操作并释放出互斥锁后，才能获得该对象的互斥锁，并执行线程B中的操作。<br> synchronized关键字：首先判断对象或方法的互斥锁是否在，若在就获得互斥锁，然后就可以执行紧随其后的临界代码段或方法体；如果对象或方法的互斥锁不在，就进入等待状态，直到获得互斥锁。<br> 1.多线程设计银行取款<br> <img src="http://q5d3u8yik.bkt.clouddn.com/xiancheng1.png" alt="avatar"><br> 2.synchronized同步语句<br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized1.png" alt="avatar"><br> 3.synchronized同步方法<br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized2.png" alt="avatar"></p><h2 id="线程之间的通信"><a href="#线程之间的通信" class="headerlink" title="线程之间的通信"></a>线程之间的通信</h2><p> 1.阻塞状态的线程一般情况下可由下列的情况所产生<br>    + 该线程调用对象的wait()方法；<br>    + 该线程本身调用了wait()方法；<br>    + 该线程和另一个线程join()在一起； //加入线程必须要在先执行的线程的start()后面调用join()才能先执行<br>    + 有优先级更高的线程处于就绪状态。<br> 2.解除阻塞的原因有<br>    + 如果线程是由调用对象的wait()方法所阻塞，则该对象的notify()方法被调用时可解除阻塞；<br>    + 线程进入睡眠(sleep)状态，但指定的睡眠时间到了。<br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized3.png" alt="avatar"><br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized4.png" alt="avatar"></p>]]></content>
     
     <summary type="html">
     
