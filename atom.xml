@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Jamzy1.github.io/"/>
-  <updated>2020-02-16T14:37:30.476Z</updated>
+  <updated>2020-02-16T14:54:34.647Z</updated>
   <id>http://Jamzy1.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://Jamzy1.github.io/2020/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E8%A8%80/"/>
     <id>http://Jamzy1.github.io/2020/02/14/数据结构-前言/</id>
     <published>2020-02-14T15:22:04.186Z</published>
-    <updated>2020-02-16T14:37:30.476Z</updated>
+    <updated>2020-02-16T14:54:34.647Z</updated>
     
-    <content type="html"><![CDATA[ <a id="more"></a><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p> == 新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内学习完，一天一章。==<br> 数据结构分为三种：线性结构、树结构、图。<br> 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。<br> 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。<br> 链式存储结构：结点(数据域，地址域)，通过地址域将关联结点连接起来。<br> 每种数据结构就是一个实现表示抽象数据类型接口的类，每个类提供接口中方法的不同实现。</p><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p> 算法时间代价：算法的时间复杂度表示算法执行时间的增长率而绝非时间；O(1)&lt;O(n)&lt;O(log)&lt;O(n)&lt;O(n$<em>$log)&lt;O(&amp;n^2&amp;)&lt;O(&amp;n^3&amp;)&lt;O(*2^n</em>)<br> 执行n次的循环语句,时间复杂度为O(n)<br> <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> n=<span class="number">8</span>,count=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">count++;</span><br></pre></td></tr></table></figure><br> 算法空间代价：算法执行时所占用的存储空间量，由辅助变量占用的存储空间为依据(即声明的临时变量等)</p><h2 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h2> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(b!=<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> temp=a%b;</span><br><span class="line">        a=b;</span><br><span class="line">        b=temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[ <a id="more"></a><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p> <strong>新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内学习完，一天一章。</strong><br> 数据结构分为三种：线性结构、树结构、图。<br> 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。<br> 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。<br> 链式存储结构：结点(数据域，地址域)，通过地址域将关联结点连接起来。<br> 每种数据结构就是一个实现表示抽象数据类型接口的类，每个类提供接口中方法的不同实现。</p><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p> 算法时间代价：算法的时间复杂度表示算法执行时间的增长率而绝非时间；O(1)&lt;O(n)&lt;O(log)&lt;O(n)&lt;O(n$<em>$log)&lt;O(&amp;n^2&amp;)&lt;O(&amp;n^3&amp;)&lt;O(*2^n</em>)<br> 执行n次的循环语句,时间复杂度为O(n)<br> <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> n=<span class="number">8</span>,count=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">count++;</span><br></pre></td></tr></table></figure><br> 算法空间代价：算法执行时所占用的存储空间量，由辅助变量占用的存储空间为依据(即声明的临时变量等)</p><h2 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h2> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(b!=<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> temp=a%b;</span><br><span class="line">        a=b;</span><br><span class="line">        b=temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt; == 新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内学习完，一
+&lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt; &lt;strong&gt;新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内
       
     
     </summary>
@@ -163,31 +163,6 @@
     
     
       <category term="weekdiary" scheme="http://Jamzy1.github.io/categories/weekdiary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Life is a movie</title>
-    <link href="http://Jamzy1.github.io/2019/10/24/MsecondB/"/>
-    <id>http://Jamzy1.github.io/2019/10/24/MsecondB/</id>
-    <published>2019-10-24T08:58:35.080Z</published>
-    <updated>2019-08-18T03:15:24.000Z</updated>
-    
-    <content type="html"><![CDATA[ <a id="more"></a><h2 id="越想过得舒服，越得花更多的心思"><a href="#越想过得舒服，越得花更多的心思" class="headerlink" title="越想过得舒服，越得花更多的心思"></a>越想过得舒服，越得花更多的心思</h2><p>&emsp;&emsp;真正的舒服，是心理上的舒服，<strong>你得花心思来充实自己，让自己的每天过得有意义、心理更踏实。</strong>不然当你一天下来，会发现你根本啥事没做成，甚至还会觉得自己忙了一天。<br>&emsp;&emsp;所以有些该坚持的事情得每天都坚持，为自己的每段时期都制定个计划。</p><h2 id="生活向前看"><a href="#生活向前看" class="headerlink" title="生活向前看"></a>生活向前看</h2><p>&emsp;&emsp;因为生活永远得向前看，<strong>所以当你遇到烦心的事时，不妨把眼光放远，然后那事情就和屁一样。</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-         &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;越想过得舒服，越得花更多的心思&quot;&gt;&lt;a href=&quot;#越想过得舒服，越得花更多的心思&quot; class=&quot;headerlink&quot; title=&quot;越想过得舒服，越得花更多的心思&quot;&gt;&lt;/a&gt;越想过得舒服，越得花更多的心思&lt;/h2&gt;&lt;p
-      
-    
-    </summary>
-    
-    
-      <category term="生活" scheme="http://Jamzy1.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
   </entry>
