@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="写在前面 新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内学习完，一天一章。 数据结构分为三种：线性结构、树结构、图。 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。 链式存储结构：结点(数据">
+<meta name="description" content="问题描述 古代某法官要判决number个犯人的死刑，他有一条荒唐的法律：让囚犯站成一个圆圈，从第start个人开始数起，每数到第distance个犯人，就拉出去处决，然后再次数distance个人，再次进行处决，，，，直到最后只剩一个人，这个人会被赦免，当number = 5，start = 0，distance = 3时，过程如下：  代码实现 12345678910111213141516">
 <meta name="keywords" content="一天不学习就难受">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构-前言">
-<meta property="og:url" content="http:&#x2F;&#x2F;jamzy1.github.io&#x2F;2020&#x2F;02&#x2F;14&#x2F;%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E8%A8%80&#x2F;index.html">
+<meta property="og:title" content="顺序表实现Josephus问题">
+<meta property="og:url" content="http:&#x2F;&#x2F;jamzy1.github.io&#x2F;2020&#x2F;02&#x2F;19&#x2F;Josephus%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF&#x2F;index.html">
 <meta property="og:site_name" content="阿正">
-<meta property="og:description" content="写在前面 新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内学习完，一天一章。 数据结构分为三种：线性结构、树结构、图。 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。 链式存储结构：结点(数据">
+<meta property="og:description" content="问题描述 古代某法官要判决number个犯人的死刑，他有一条荒唐的法律：让囚犯站成一个圆圈，从第start个人开始数起，每数到第distance个犯人，就拉出去处决，然后再次数distance个人，再次进行处决，，，，直到最后只剩一个人，这个人会被赦免，当number = 5，start = 0，distance = 3时，过程如下：  代码实现 12345678910111213141516">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-16T14:54:34.647Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;Josephus.png">
+<meta property="og:updated_time" content="2020-02-19T02:27:46.408Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;Josephus.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://Jamzy1.github.io/2020/02/14/数据结构-前言/"/>
+  <link rel="canonical" href="http://Jamzy1.github.io/2020/02/19/Josephus约瑟夫环/"/>
 
 
 
 
 
-  <title>数据结构-前言 | 阿正</title>
+  <title>顺序表实现Josephus问题 | 阿正</title>
   
 
 
@@ -250,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Jamzy1.github.io/2020/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E8%A8%80/">
+    <link itemprop="mainEntityOfPage" href="http://Jamzy1.github.io/2020/02/19/Josephus%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="史佳正">
@@ -267,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构-前言</h1>
+          <h1 class="post-title" itemprop="name headline">顺序表实现Josephus问题</h1>
         
 
         <div class="post-meta">
@@ -280,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-14T23:22:04+08:00">
-                2020-02-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-19T10:19:46+08:00">
+                2020-02-19
               </time>
             
 
@@ -341,9 +343,8 @@
 
       
          <a id="more"></a>
-<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p> <strong>新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内学习完，一天一章。</strong><br> 数据结构分为三种：线性结构、树结构、图。<br> 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。<br> 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。<br> 链式存储结构：结点(数据域，地址域)，通过地址域将关联结点连接起来。<br> 每种数据结构就是一个实现表示抽象数据类型接口的类，每个类提供接口中方法的不同实现。</p>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p> 算法时间代价：算法的时间复杂度表示算法执行时间的增长率而绝非时间；O(1)&lt;O(n)&lt;O(log)&lt;O(n)&lt;O(n$<em>$log)&lt;O(&amp;n^2&amp;)&lt;O(&amp;n^3&amp;)&lt;O(*2^n</em>)<br> 执行n次的循环语句,时间复杂度为O(n)<br> <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> n=<span class="number">8</span>,count=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">count++;</span><br></pre></td></tr></table></figure><br> 算法空间代价：算法执行时所占用的存储空间量，由辅助变量占用的存储空间为依据(即声明的临时变量等)</p>
-<h2 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h2> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(b!=<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> temp=a%b;</span><br><span class="line">        a=b;</span><br><span class="line">        b=temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p> 古代某法官要判决number个犯人的死刑，他有一条荒唐的法律：让囚犯站成一个圆圈，从第start个人开始数起，每数到第distance个犯人，就拉出去处决，然后再次数distance个人，再次进行处决，，，，直到最后只剩一个人，这个人会被赦免，当number = 5，start = 0，distance = 3时，过程如下：<br> <img src="http://q5d3u8yik.bkt.clouddn.com/Josephus.png" alt="avatar"><br> 代码实现<br> <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public <span class="keyword">class</span> Josephus &#123;</span><br><span class="line">   public <span class="constructor">Josephus(<span class="params">int</span> <span class="params">number</span> ,<span class="params">int</span> <span class="params">start</span> ,<span class="params">int</span> <span class="params">distance</span>)</span>&#123;</span><br><span class="line">       <span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">"Josephus("</span>+number+<span class="string">","</span>+start+<span class="string">","</span>+distance+<span class="string">"),"</span>);</span><br><span class="line">       SeqList&lt;String&gt; <span class="built_in">list</span>=<span class="keyword">new</span> SeqList&lt;String&gt;(number);                   <span class="comment">//创建顺序表并给容量number</span></span><br><span class="line">       for (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt;number ; i++)</span><br><span class="line">           <span class="built_in">list</span>.insert((<span class="built_in">char</span>)(<span class="character">'A'</span>+i)+<span class="string">""</span>);                                  <span class="comment">//给内容ABC...</span></span><br><span class="line">       <span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="built_in">list</span>.<span class="keyword">to</span><span class="constructor">String()</span>);                                <span class="comment">//打印成字符串</span></span><br><span class="line">       <span class="built_in">int</span> i=start;</span><br><span class="line">       <span class="keyword">while</span>(<span class="built_in">list</span>.size<span class="literal">()</span>&gt;<span class="number">1</span>)&#123;</span><br><span class="line">           i=(i+distance-<span class="number">1</span>) % <span class="built_in">list</span>.size<span class="literal">()</span>;                                 <span class="comment">//用取余防止数组越界</span></span><br><span class="line">           <span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">"删除"</span>+<span class="built_in">list</span>.remove(i).<span class="keyword">to</span><span class="constructor">String()</span>+<span class="string">","</span>);</span><br><span class="line">           <span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="built_in">list</span>.<span class="keyword">to</span><span class="constructor">String()</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">"被赦免者是"</span>+<span class="built_in">list</span>.get(<span class="number">0</span>).<span class="keyword">to</span><span class="constructor">String()</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String<span class="literal">[]</span> args) &#123;</span><br><span class="line">       <span class="keyword">new</span> <span class="constructor">Josephus(26,0,2)</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -367,8 +368,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/14/JAVA-%E6%B3%9B%E5%9E%8B/" rel="next" title="JAVA 泛型">
-                <i class="fa fa-chevron-left"></i> JAVA 泛型
+              <a href="/2020/02/16/%E7%BA%BF%E6%80%A7%E8%A1%A8/" rel="next" title="线性表">
+                <i class="fa fa-chevron-left"></i> 线性表
               </a>
             
           </div>
@@ -376,10 +377,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/16/%E7%BA%BF%E6%80%A7%E8%A1%A8/" rel="prev" title="线性表">
-                线性表 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,7 +538,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求最大公约数"><span class="nav-number">3.</span> <span class="nav-text">求最大公约数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li></ol></div>
             
 
           </div>
