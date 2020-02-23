@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="异常处理机制 每当JAVA程序运行过程中发生一个可识别的运行错误时，即该错误有一个异常类（最上层Java.lang.Throwable包括两个子类,无法捕捉的Java.lang.Error和Java.lang.Exception）与之对应时，系统都会产生一个相应的给异常类的对象。一旦一个异常对象产生了，系统中就一定有相应的机制来处理它，从而保证整个程序运行的安全性。这就是JAVA异常处理机制。">
+<meta name="description" content="下载struts库文件并解压 从解压的文件夹中的lib目录中复制基本的jar文件到项目的WEB-INF\lib目录中 配置web.xml文件123456789101112131415 &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt; &amp;lt;web-app version=&quot;2.5&quot; xmlns=&quot;http:&#x2F;&#x2F;java.sun.com&#x2F;xml&#x2F;ns&#x2F;">
 <meta name="keywords" content="一天不学习就难受">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA 异常处理-Exception">
-<meta property="og:url" content="http:&#x2F;&#x2F;jamzy1.github.io&#x2F;2020&#x2F;02&#x2F;07&#x2F;JAVA-Exception&#x2F;index.html">
+<meta property="og:title" content="部署Struts框架">
+<meta property="og:url" content="http:&#x2F;&#x2F;jamzy1.github.io&#x2F;2020&#x2F;02&#x2F;23&#x2F;%E9%83%A8%E7%BD%B2Struts%E6%A1%86%E6%9E%B6&#x2F;index.html">
 <meta property="og:site_name" content="阿正">
-<meta property="og:description" content="异常处理机制 每当JAVA程序运行过程中发生一个可识别的运行错误时，即该错误有一个异常类（最上层Java.lang.Throwable包括两个子类,无法捕捉的Java.lang.Error和Java.lang.Exception）与之对应时，系统都会产生一个相应的给异常类的对象。一旦一个异常对象产生了，系统中就一定有相应的机制来处理它，从而保证整个程序运行的安全性。这就是JAVA异常处理机制。">
+<meta property="og:description" content="下载struts库文件并解压 从解压的文件夹中的lib目录中复制基本的jar文件到项目的WEB-INF\lib目录中 配置web.xml文件123456789101112131415 &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt; &amp;lt;web-app version=&quot;2.5&quot; xmlns=&quot;http:&#x2F;&#x2F;java.sun.com&#x2F;xml&#x2F;ns&#x2F;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;try.png">
-<meta property="og:updated_time" content="2020-02-08T04:22:56.353Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;SetStruts.png">
+<meta property="og:updated_time" content="2020-02-23T06:17:48.465Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;try.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;SetStruts.png">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://Jamzy1.github.io/2020/02/07/JAVA-Exception/"/>
+  <link rel="canonical" href="http://Jamzy1.github.io/2020/02/23/部署Struts框架/"/>
 
 
 
 
 
-  <title>JAVA 异常处理-Exception | 阿正</title>
+  <title>部署Struts框架 | 阿正</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Jamzy1.github.io/2020/02/07/JAVA-Exception/">
+    <link itemprop="mainEntityOfPage" href="http://Jamzy1.github.io/2020/02/23/%E9%83%A8%E7%BD%B2Struts%E6%A1%86%E6%9E%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="史佳正">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JAVA 异常处理-Exception</h1>
+          <h1 class="post-title" itemprop="name headline">部署Struts框架</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-07T12:09:58+08:00">
-                2020-02-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-23T13:54:23+08:00">
+                2020-02-23
               </time>
             
 
@@ -305,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
                   </a>
                 </span>
 
@@ -343,9 +343,14 @@
 
       
          <a id="more"></a>
-<h2 id="异常处理机制"><a href="#异常处理机制" class="headerlink" title="异常处理机制"></a>异常处理机制</h2><p> 每当JAVA程序运行过程中发生一个可识别的运行错误时，即该错误有一个异常类（最上层Java.lang.Throwable包括两个子类,无法捕捉的Java.lang.Error和Java.lang.Exception）与之对应时，系统都会产生一个相应的给异常类的对象。一旦一个异常对象产生了，系统中就一定有相应的机制来处理它，从而保证整个程序运行的安全性。这就是JAVA异常处理机制。</p>
-<h2 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h2><p> 生成异常对象并把它交给运行系统的过程称为抛出异常。在没有任何的处理情况下异常对象会自动的抛给调用端，调用端接收到这个异常对象，由于调用端也没有任何处理，则继续向上抛出给JVM，JVM会打印这个异常对象。<br> 1.在方法体内使用throw语句抛出异常对象<br> 2.在方法头部添加throws子句表示方法将抛出异常<br> 通过这两种方式抛出的异常，在方法中就不必编写try—catch程序段了，因为异常已经被抛到上层，所以交由调用此方法的程序来处理。当然方法体内也可以try-catch处理其他异常。</p>
-<h2 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h2><p> <strong>异常的处理需要先抛出(系统自动抛出和指定方法抛出)，然后再进行捕捉</strong><br> <img src="http://q5d3u8yik.bkt.clouddn.com/try.png" alt="avatar"><br> finally里面适合做方法的资源关闭和首尾工作。方法遇到return形成返回值，后续再修改不会改变返回值;finally是唯一一个可以return一次后还能再return一次的代码块，可以修改方法返回值。<br> RuntimeException可以不编写异常处理的程序代码，仍然可以编译成功，它是在程序运行时才可能发生；而IOException一定要进行捕捉处理才行，它通常用来处理与输入输出有关的操作。</p>
+<ol>
+<li>下载struts库文件并解压</li>
+<li>从解压的文件夹中的lib目录中复制基本的jar文件到项目的WEB-INF\lib目录中<br><img src="http://q5d3u8yik.bkt.clouddn.com/SetStruts.png" alt="avatar"></li>
+<li>配置web.xml文件<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">web-app</span> <span class="attr">version</span>=<span class="string">"2.5"</span> <span class="attr">xmlns</span>=<span class="string">"http://java.sun.com/xml/ns/javaee"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">xsi:schemaLocation</span>=<span class="string">"http://java.sun.com/xml/ns/javaee </span></span></span><br><span class="line"><span class="tag"><span class="string">	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
+这一步可能会出现导致运行报错404的原因：filter-class路径写错，struts2 2.5的版本以后，过滤器的路径和以前不一样了。之前filter的路径是org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter，  struts2 2.5版本之后呢，中间的这个.ng就没有了。</li>
+<li>配置struts.xml<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE struts PUBLIC</span></span><br><span class="line"><span class="meta">   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"</span></span><br><span class="line"><span class="meta">   "http://struts.apache.org/dtds/struts-2.3.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"text.hello"</span> <span class="attr">namespace</span>=<span class="string">"/"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"hello"</span> <span class="attr">class</span>=<span class="string">"text.hello.HelloUserAction"</span> <span class="attr">method</span>=<span class="string">"execute"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"success"</span>&gt;</span>/hellouser.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">   <span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -370,8 +375,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/24/weekdiary1/" rel="next" title="something about my summer vacation">
-                <i class="fa fa-chevron-left"></i> something about my summer vacation
+              <a href="/2020/02/19/Josephus%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" rel="next" title="顺序表实现Josephus问题">
+                <i class="fa fa-chevron-left"></i> 顺序表实现Josephus问题
               </a>
             
           </div>
@@ -379,10 +384,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/08/JAVA-IO/" rel="prev" title="JAVA 文件处理-Java.IO">
-                JAVA 文件处理-Java.IO <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -436,17 +437,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -534,22 +526,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理机制"><span class="nav-number">1.</span> <span class="nav-text">异常处理机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抛出异常"><span class="nav-number">2.</span> <span class="nav-text">抛出异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理异常"><span class="nav-number">3.</span> <span class="nav-text">处理异常</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
