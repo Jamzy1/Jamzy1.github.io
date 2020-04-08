@@ -73,6 +73,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="阿正" type="application/atom+xml" />
 
@@ -81,18 +83,20 @@
 
 
 
-<meta name="description" content="部署Struts框架 下载struts库文件并解压 从解压的文件夹中的lib目录中复制基本的jar文件到项目的WEB-INF\lib目录中 配置web.xml文件123456789101112131415 &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt; &amp;lt;web-app version=&quot;2.5&quot; xmlns=&quot;http:&#x2F;&#x2F;java.sun.c">
-<meta name="keywords" content="一天不学习就难受">
+<meta name="description" content="部署Struts框架 下载struts库文件并解压 从解压的文件夹中的lib目录中复制基本的jar文件到项目的WEB-INF\lib目录中 配置web.xml文件123456789101112131415 &lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt; &lt;web-app version&#x3D;&quot;2.5&quot; xmlns&#x3D;&quot;http:&#x2F;&#x2F;java.sun.c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Struts框架">
-<meta property="og:url" content="http:&#x2F;&#x2F;jamzy1.github.io&#x2F;2020&#x2F;02&#x2F;23&#x2F;Struts%E6%A1%86%E6%9E%B6&#x2F;index.html">
+<meta property="og:url" content="http://jamzy1.github.io/2020/02/23/Struts%E6%A1%86%E6%9E%B6/index.html">
 <meta property="og:site_name" content="阿正">
-<meta property="og:description" content="部署Struts框架 下载struts库文件并解压 从解压的文件夹中的lib目录中复制基本的jar文件到项目的WEB-INF\lib目录中 配置web.xml文件123456789101112131415 &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt; &amp;lt;web-app version=&quot;2.5&quot; xmlns=&quot;http:&#x2F;&#x2F;java.sun.c">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;SetStruts.png">
-<meta property="og:updated_time" content="2020-02-29T12:50:11.955Z">
+<meta property="og:description" content="部署Struts框架 下载struts库文件并解压 从解压的文件夹中的lib目录中复制基本的jar文件到项目的WEB-INF\lib目录中 配置web.xml文件123456789101112131415 &lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt; &lt;web-app version&#x3D;&quot;2.5&quot; xmlns&#x3D;&quot;http:&#x2F;&#x2F;java.sun.c">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://q5d3u8yik.bkt.clouddn.com/SetStruts.png">
+<meta property="article:published_time" content="2020-02-23T05:54:23.021Z">
+<meta property="article:modified_time" content="2020-02-29T12:50:11.955Z">
+<meta property="article:author" content="史佳正">
+<meta property="article:tag" content="一天不学习就难受">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;q5d3u8yik.bkt.clouddn.com&#x2F;SetStruts.png">
+<meta name="twitter:image" content="http://q5d3u8yik.bkt.clouddn.com/SetStruts.png">
 
 
 
@@ -138,7 +142,7 @@
 
 
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -348,7 +352,7 @@
 <li>从解压的文件夹中的lib目录中复制基本的jar文件到项目的WEB-INF\lib目录中<br><img src="http://q5d3u8yik.bkt.clouddn.com/SetStruts.png" alt="avatar"></li>
 <li>配置web.xml文件<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">web-app</span> <span class="attr">version</span>=<span class="string">"2.5"</span> <span class="attr">xmlns</span>=<span class="string">"http://java.sun.com/xml/ns/javaee"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">xsi:schemaLocation</span>=<span class="string">"http://java.sun.com/xml/ns/javaee </span></span></span><br><span class="line"><span class="tag"><span class="string">	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
 这一步可能会出现导致运行报错404的原因：filter-class路径写错，struts2 2.5的版本以后，过滤器的路径和以前不一样了。之前filter的路径是org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter,struts2 2.5版本之后呢，中间的这个.ng就没有了。</li>
-<li>配置struts.xml<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE struts PUBLIC</span></span><br><span class="line"><span class="meta">   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"</span></span><br><span class="line"><span class="meta">   "http://struts.apache.org/dtds/struts-2.3.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"text.hello"</span> <span class="attr">namespace</span>=<span class="string">"/"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"hello"</span> <span class="attr">class</span>=<span class="string">"text.hello.HelloUserAction"</span> <span class="attr">method</span>=<span class="string">"execute"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"success"</span>&gt;</span>/hellouser.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">   <span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li>配置struts.xml<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">struts</span> <span class="meta-keyword">PUBLIC</span></span></span><br><span class="line"><span class="meta">   <span class="meta-string">"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"</span></span></span><br><span class="line"><span class="meta">   <span class="meta-string">"http://struts.apache.org/dtds/struts-2.3.dtd"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"text.hello"</span> <span class="attr">namespace</span>=<span class="string">"/"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"hello"</span> <span class="attr">class</span>=<span class="string">"text.hello.HelloUserAction"</span> <span class="attr">method</span>=<span class="string">"execute"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"success"</span>&gt;</span>/hellouser.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">   <span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></span><br></pre></td></tr></table></figure>
 在开发环境下配置文件应保存在src目录中，Web应用打包后保存在web-INF\classes目录中。<h2 id="OGNL表达式语言"><a href="#OGNL表达式语言" class="headerlink" title="OGNL表达式语言"></a>OGNL表达式语言</h2>ValueStack 栈：应用程序每执行一个动作方法前都会先创建一个ValueStack对象，ValueStack栈内部有两个逻辑组成部分，分别是Object Srack（存对象和方法）和Stack Context（存映射关系）。<br>访问Object Stack中对象属性：<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">object</span>.propertyName</span><br><span class="line"><span class="selector-tag">object</span>[<span class="string">'propertyName'</span>]</span><br><span class="line"><span class="selector-tag">object</span>[<span class="string">"propertyName"</span>]</span><br></pre></td></tr></table></figure>
 访问Stack Context中对象需要给OGNL表达式加上一个前缀字符“#” <h2 id="Struts-2-常用标签"><a href="#Struts-2-常用标签" class="headerlink" title="Struts 2 常用标签"></a>Struts 2 常用标签</h2></li>
 </ol>
@@ -467,7 +471,7 @@
               
                 <a href="/archive">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -478,7 +482,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
