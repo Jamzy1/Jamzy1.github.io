@@ -90,20 +90,20 @@
 <meta property="og:site_name" content="阿正">
 <meta property="og:description" content="实现线程的两种方式 1.继承java.lang包中的Thread类  2.用Runnable接口来创建线程  线程生命周期  线程的并发 互斥锁：当线程A获得一个对象的互斥锁后，线程B若也想获得该对象的互斥锁，就必须等待线程A完成规定的操作并释放出互斥锁后，才能获得该对象的互斥锁，并执行线程B中的操作。 synchronized关键字：首先判断对象或方法的互斥锁是否在，若在就获得互斥锁，然后就">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://q5d3u8yik.bkt.clouddn.com/Thread.png">
-<meta property="og:image" content="http://q5d3u8yik.bkt.clouddn.com/Runnable.png">
-<meta property="og:image" content="http://q5d3u8yik.bkt.clouddn.com/life.png">
+<meta property="og:image" content="http://image-kl.test.upcdn.net/Java/Thread.png">
+<meta property="og:image" content="http://image-kl.test.upcdn.net/Java/Runnable.png">
+<meta property="og:image" content="http://image-kl.test.upcdn.net/Java/life.png">
 <meta property="og:image" content="http://q5d3u8yik.bkt.clouddn.com/xiancheng1.png">
 <meta property="og:image" content="http://q5d3u8yik.bkt.clouddn.com/synchronized1.png">
 <meta property="og:image" content="http://q5d3u8yik.bkt.clouddn.com/synchronized2.png">
 <meta property="og:image" content="http://q5d3u8yik.bkt.clouddn.com/synchronized3.png">
 <meta property="og:image" content="http://q5d3u8yik.bkt.clouddn.com/synchronized4.png">
 <meta property="article:published_time" content="2020-02-09T03:01:25.408Z">
-<meta property="article:modified_time" content="2020-02-14T05:04:41.860Z">
+<meta property="article:modified_time" content="2020-06-22T03:29:43.952Z">
 <meta property="article:author" content="史佳正">
 <meta property="article:tag" content="一天不学习就难受">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://q5d3u8yik.bkt.clouddn.com/Thread.png">
+<meta name="twitter:image" content="http://image-kl.test.upcdn.net/Java/Thread.png">
 
 
 
@@ -167,7 +167,7 @@
     
       <div class="site-meta-headline">
         <a>
-          <img class="custom-logo-image" src="/images/index-logo.jpg"
+          <img class="custom-logo-image" src="http://image-kl.test.upcdn.net/index-logo.jpg"
                alt="阿正"/>
         </a>
       </div>
@@ -354,8 +354,8 @@
 
       
          <a id="more"></a>
-<h2 id="实现线程的两种方式"><a href="#实现线程的两种方式" class="headerlink" title="实现线程的两种方式"></a>实现线程的两种方式</h2><p> 1.继承java.lang包中的Thread类<br> <img src="http://q5d3u8yik.bkt.clouddn.com/Thread.png" alt="avatar"><br> 2.用Runnable接口来创建线程<br> <img src="http://q5d3u8yik.bkt.clouddn.com/Runnable.png" alt="avatar"></p>
-<h2 id="线程生命周期"><a href="#线程生命周期" class="headerlink" title="线程生命周期"></a>线程生命周期</h2><p> <img src="http://q5d3u8yik.bkt.clouddn.com/life.png" alt="avatar"></p>
+<h2 id="实现线程的两种方式"><a href="#实现线程的两种方式" class="headerlink" title="实现线程的两种方式"></a>实现线程的两种方式</h2><p> 1.继承java.lang包中的Thread类<br> <img src="http://image-kl.test.upcdn.net/Java/Thread.png" alt="avatar"><br> 2.用Runnable接口来创建线程<br> <img src="http://image-kl.test.upcdn.net/Java/Runnable.png" alt="avatar"></p>
+<h2 id="线程生命周期"><a href="#线程生命周期" class="headerlink" title="线程生命周期"></a>线程生命周期</h2><p> <img src="http://image-kl.test.upcdn.net/Java/life.png" alt="avatar"></p>
 <h2 id="线程的并发"><a href="#线程的并发" class="headerlink" title="线程的并发"></a>线程的并发</h2><p> 互斥锁：当线程A获得一个对象的互斥锁后，线程B若也想获得该对象的互斥锁，就必须等待线程A完成规定的操作并释放出互斥锁后，才能获得该对象的互斥锁，并执行线程B中的操作。<br> synchronized关键字：首先判断对象或方法的互斥锁是否在，若在就获得互斥锁，然后就可以执行紧随其后的临界代码段或方法体；如果对象或方法的互斥锁不在，就进入等待状态，直到获得互斥锁。<br> 1.多线程设计银行取款<br> <img src="http://q5d3u8yik.bkt.clouddn.com/xiancheng1.png" alt="avatar"><br> 2.synchronized同步语句<br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized1.png" alt="avatar"><br> 3.synchronized同步方法<br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized2.png" alt="avatar"></p>
 <h2 id="线程之间的通信"><a href="#线程之间的通信" class="headerlink" title="线程之间的通信"></a>线程之间的通信</h2><p> 1.阻塞状态的线程一般情况下可由下列的情况所产生<br>    + 该线程调用对象的wait()方法；<br>    + 该线程本身调用了wait()方法；<br>    + 该线程和另一个线程join()在一起； //加入线程必须要在先执行的线程的start()后面调用join()才能先执行<br>    + 有优先级更高的线程处于就绪状态。<br> 2.解除阻塞的原因有<br>    + 如果线程是由调用对象的wait()方法所阻塞，则该对象的notify()方法被调用时可解除阻塞；<br>    + 线程进入睡眠(sleep)状态，但指定的睡眠时间到了。<br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized3.png" alt="avatar"><br> <img src="http://q5d3u8yik.bkt.clouddn.com/synchronized4.png" alt="avatar"></p>
 
