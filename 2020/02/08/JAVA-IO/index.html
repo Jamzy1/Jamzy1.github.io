@@ -90,13 +90,11 @@
 <meta property="og:site_name" content="阿正">
 <meta property="og:description" content="流 流是指计算机各部件之间的数据流动。Java只针对流做处理，增强了程序的可移植性。 InputStream和OutpuStream通常用来处理“位流”，这种流通常被用来读写诸如图片、音频视频等二进制文件也可读写文本文件，而Reader和Writer类则是用来处理“字符流”，也就是文本文件。  InputStream(字节输入流类) OutputStream(字节输出流类)文件输入输出流(Fi">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://image-kl.test.upcdn.net/Java/InputStream.png">
 <meta property="article:published_time" content="2020-02-08T03:33:55.733Z">
-<meta property="article:modified_time" content="2020-06-22T03:28:47.567Z">
+<meta property="article:modified_time" content="2020-06-22T05:06:08.362Z">
 <meta property="article:author" content="史佳正">
 <meta property="article:tag" content="一天不学习就难受">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://image-kl.test.upcdn.net/Java/InputStream.png">
 
 
 
@@ -309,8 +307,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -350,10 +348,19 @@
 <h2 id="流"><a href="#流" class="headerlink" title="流"></a>流</h2><p> 流是指计算机各部件之间的数据流动。Java只针对流做处理，增强了程序的可移植性。<br> InputStream和OutpuStream通常用来处理“位流”，这种流通常被用来读写诸如图片、音频视频等二进制文件也可读写文本文件，而Reader和Writer类则是用来处理“字符流”，也就是文本文件。</p>
 <ul>
 <li>InputStream(字节输入流类)</li>
-<li>OutputStream(字节输出流类)<br>文件输入输出流(FileInputStream)<br><img src="http://image-kl.test.upcdn.net/Java/InputStream.png" alt="avatar"><br>管道输入输出流<br>过滤输入输出流：在输入输出数据的同时能对所传输的数据做指定类型或格式的转换。<br>标准输入输出：</li>
+<li>OutputStream(字节输出流类)<br>文件输入输出流(FileInputStream)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        FileInputStream fin;</span><br><span class="line">        FileOutputStream fout;      <span class="comment">//声明对象</span></span><br><span class="line">        <span class="keyword">char</span> ch;</span><br><span class="line">        <span class="keyword">int</span> data;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            <span class="comment">//输入字符到指定文件</span></span><br><span class="line">            fin=<span class="keyword">new</span> FileInputStream(FileDescriptor.in);</span><br><span class="line">            fout=<span class="keyword">new</span> FileOutputStream(<span class="string">"E:\\blogimage\\text.txt"</span>);  <span class="comment">//创建对象</span></span><br><span class="line">            System.out.println(<span class="string">"请输入一串字符，并以#结束："</span>);</span><br><span class="line">            <span class="keyword">while</span>((ch=(<span class="keyword">char</span>)fin.read())!=<span class="string">'#'</span>)    <span class="comment">//从键盘读数据、每次读入一个二进制数据</span></span><br><span class="line">                fout.write(ch);                 <span class="comment">//将读到的不为 # 的数据写入指定文件</span></span><br><span class="line">            fin.close();</span><br><span class="line">            fout.close();</span><br><span class="line">            System.out.println();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//将文件中的内容输出到屏幕</span></span><br><span class="line">            fin=<span class="keyword">new</span> FileInputStream(<span class="string">"E:\\blogimage\\text.txt"</span>);</span><br><span class="line">            fout=<span class="keyword">new</span> FileOutputStream(FileDescriptor.out);                <span class="comment">//重新定义两个对象</span></span><br><span class="line">            <span class="keyword">while</span>(fin.available()&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                data=fin.read();                                <span class="comment">//从输出流将字节读到变量data</span></span><br><span class="line">                fout.write(data);                               <span class="comment">//将变量data的全部字节按顺序写入到输出流</span></span><br><span class="line">            &#125;</span><br><span class="line">            fin.close();</span><br><span class="line">            fout.close();</span><br><span class="line">        &#125;<span class="keyword">catch</span>(FileNotFoundException e)&#123;</span><br><span class="line">            System.out.println(<span class="string">"文件没找到！"</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>管道输入输出流</li>
+<li>过滤输入输出流：在输入输出数据的同时能对所传输的数据做指定类型或格式的转换。</li>
+<li>标准输入输出：</li>
+</ul>
+<ol>
 <li>Reader(字符输入流类)</li>
 <li>Writer(字符输出流类)</li>
-</ul>
+</ol>
 
       
     </div>
