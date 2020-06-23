@@ -83,15 +83,15 @@
 
 
 
-<meta name="description" content="写在前面 新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内学习完，一天一章。 数据结构分为三种：线性结构、树结构、图。 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。 链式存储结构：结点(数据">
+<meta name="description" content="写在前面 数据结构分为三种：线性结构、树结构、图。 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。 链式存储结构：结点(数据域，地址域)，通过地址域将关联结点连接起来。 每种数据结构就是一个实现表示抽象数据类型接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构-前言">
 <meta property="og:url" content="http://jamzy1.github.io/2020/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%89%8D%E8%A8%80/index.html">
 <meta property="og:site_name" content="阿正">
-<meta property="og:description" content="写在前面 新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内学习完，一天一章。 数据结构分为三种：线性结构、树结构、图。 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。 链式存储结构：结点(数据">
+<meta property="og:description" content="写在前面 数据结构分为三种：线性结构、树结构、图。 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。 链式存储结构：结点(数据域，地址域)，通过地址域将关联结点连接起来。 每种数据结构就是一个实现表示抽象数据类型接">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-14T15:22:04.186Z">
-<meta property="article:modified_time" content="2020-06-22T02:22:35.808Z">
+<meta property="article:modified_time" content="2020-06-22T05:10:22.944Z">
 <meta property="article:author" content="史佳正">
 <meta property="article:tag" content="一天不学习就难受">
 <meta name="twitter:card" content="summary">
@@ -345,7 +345,7 @@
 
       
          <a id="more"></a>
-<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p> <strong>新开了数据结构一栏，原本一年前就学完的知识，今天再次拾起，打算十天内学习完，一天一章。</strong><br> 数据结构分为三种：线性结构、树结构、图。<br> 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。<br> 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。<br> 链式存储结构：结点(数据域，地址域)，通过地址域将关联结点连接起来。<br> 每种数据结构就是一个实现表示抽象数据类型接口的类，每个类提供接口中方法的不同实现。</p>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p> 数据结构分为三种：线性结构、树结构、图。<br> 数据结构概念包含三方面:数据的逻辑结构(线性表、树、图), 数据的储存结构(顺序存储结构和链式存储结构)和对数据的操作。<br> 顺序存储结构(数组)使用一组连续的内存单元依次存放数据，数据元素在内存中的物理存储次序与他们的逻辑次序相同。<br> 链式存储结构：结点(数据域，地址域)，通过地址域将关联结点连接起来。<br> 每种数据结构就是一个实现表示抽象数据类型接口的类，每个类提供接口中方法的不同实现。</p>
 <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p> 算法时间代价：算法的时间复杂度表示算法执行时间的增长率而绝非时间；O(1)&lt;O(n)&lt;O(log)&lt;O(n)&lt;O(n$<em>$log)&lt;O(&amp;n^2&amp;)&lt;O(&amp;n^3&amp;)&lt;O(*2^n</em>)<br> 执行n次的循环语句,时间复杂度为O(n)<br> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n=<span class="number">8</span>,count=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">count++;</span><br></pre></td></tr></table></figure><br> 算法空间代价：算法执行时所占用的存储空间量，由辅助变量占用的存储空间为依据(即声明的临时变量等)</p>
 <h2 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h2> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(b!=<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> temp=a%b;</span><br><span class="line">        a=b;</span><br><span class="line">        b=temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
@@ -462,7 +462,7 @@
               
                 <a href="/archive">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
