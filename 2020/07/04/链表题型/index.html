@@ -83,15 +83,15 @@
 
 
 
-<meta name="description" content="将单链表中各结点的next域改为指向其前驱结点，原第一个结点的next域为空，head改为指向原先的最后一个结点。 list.head.next表示第一个元素  1234567891011121314151617181920 public class SinglyList_reverse &amp;#123;           &#x2F;&#x2F;单链表逆转    public static &lt;T&gt;">
+<meta name="description" content="删除排序链表重复元素给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。 1234567891011public ListNode deleteDuplicates(ListNode head) &amp;#123;       ListNode current &#x3D; head;       while (current !&#x3D; null &amp;&amp; current.next !&#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="单链表逆转">
-<meta property="og:url" content="http://jamzy1.github.io/2020/02/26/%E5%8D%95%E9%93%BE%E8%A1%A8%E9%80%86%E8%BD%AC/index.html">
+<meta property="og:title" content="链表题型">
+<meta property="og:url" content="http://jamzy1.github.io/2020/07/04/%E9%93%BE%E8%A1%A8%E9%A2%98%E5%9E%8B/index.html">
 <meta property="og:site_name" content="阿正">
-<meta property="og:description" content="将单链表中各结点的next域改为指向其前驱结点，原第一个结点的next域为空，head改为指向原先的最后一个结点。 list.head.next表示第一个元素  1234567891011121314151617181920 public class SinglyList_reverse &amp;#123;           &#x2F;&#x2F;单链表逆转    public static &lt;T&gt;">
+<meta property="og:description" content="删除排序链表重复元素给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。 1234567891011public ListNode deleteDuplicates(ListNode head) &amp;#123;       ListNode current &#x3D; head;       while (current !&#x3D; null &amp;&amp; current.next !&#x3D;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-26T13:48:55.686Z">
-<meta property="article:modified_time" content="2020-06-22T05:07:21.496Z">
+<meta property="article:published_time" content="2020-07-04T02:16:01.241Z">
+<meta property="article:modified_time" content="2020-07-04T06:28:01.169Z">
 <meta property="article:author" content="史佳正">
 <meta property="article:tag" content="悲观者往往正确，乐观者往往成功">
 <meta name="twitter:card" content="summary">
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://Jamzy1.github.io/2020/02/26/单链表逆转/"/>
+  <link rel="canonical" href="http://Jamzy1.github.io/2020/07/04/链表题型/"/>
 
 
 
 
 
-  <title>单链表逆转 | 阿正</title>
+  <title>链表题型 | 阿正</title>
   
 
 
@@ -254,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Jamzy1.github.io/2020/02/26/%E5%8D%95%E9%93%BE%E8%A1%A8%E9%80%86%E8%BD%AC/">
+    <link itemprop="mainEntityOfPage" href="http://Jamzy1.github.io/2020/07/04/%E9%93%BE%E8%A1%A8%E9%A2%98%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="史佳正">
@@ -271,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">单链表逆转</h1>
+          <h1 class="post-title" itemprop="name headline">链表题型</h1>
         
 
         <div class="post-meta">
@@ -284,8 +284,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-26T21:48:55+08:00">
-                2020-02-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-04T10:16:01+08:00">
+                2020-07-04
               </time>
             
 
@@ -345,8 +345,16 @@
 
       
          <a id="more"></a>
-<p> 将单链表中各结点的next域改为指向其前驱结点，原第一个结点的next域为空，head改为指向原先的最后一个结点。<br> list.head.next表示第一个元素</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SinglyList_reverse</span> </span>&#123;           <span class="comment">//单链表逆转</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(SinglyList&lt;T&gt; list)</span></span>&#123;</span><br><span class="line">        Node&lt;T&gt; p=list.head.next,succ=<span class="keyword">null</span>,front=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">while</span>(p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            succ=p.next;        <span class="comment">//p的下一结点存在succ</span></span><br><span class="line">            p.next=front;       <span class="comment">//将p的下一结点指向front</span></span><br><span class="line">            front=p;            <span class="comment">//front向后走一步</span></span><br><span class="line">            p=succ;             <span class="comment">//p向后走一步</span></span><br><span class="line">        &#125;</span><br><span class="line">        list.head.next=front;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String value[] = &#123; <span class="string">"A"</span>, <span class="string">"B"</span>, <span class="string">"C"</span>, <span class="string">"D"</span>, <span class="string">"E"</span>, <span class="string">"F"</span> &#125;;</span><br><span class="line">        SinglyList&lt;String&gt; list = <span class="keyword">new</span> SinglyList&lt;String&gt;(value);</span><br><span class="line">        System.out.println(<span class="string">"list: "</span> + list.toString());</span><br><span class="line">        reverse(list);</span><br><span class="line">        System.out.println(<span class="string">"逆转后 "</span> + list.toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除排序链表重复元素"><a href="#删除排序链表重复元素" class="headerlink" title="删除排序链表重复元素"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/" target="_blank" rel="noopener">删除排序链表重复元素</a></h2><p>给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">       ListNode current = head;</span><br><span class="line">       <span class="keyword">while</span> (current != <span class="keyword">null</span> &amp;&amp; current.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">           <span class="keyword">if</span> (current.next.val == current.val) &#123;</span><br><span class="line">               current.next = current.next.next;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               current = current.next;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> head;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除排序链表重复元素2"><a href="#删除排序链表重复元素2" class="headerlink" title="删除排序链表重复元素2"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/" target="_blank" rel="noopener">删除排序链表重复元素2</a></h2><p>给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 <em>没有重复出现</em> 的数字。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode no1=<span class="keyword">new</span> ListNode(<span class="number">0</span>);no1.next=head;</span><br><span class="line">        ListNode p1=no1,p2=head;</span><br><span class="line">        <span class="keyword">int</span> r=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(p1.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="comment">//将所有相等的元素集合在一起</span></span><br><span class="line">            <span class="keyword">while</span>(p2.next!=<span class="keyword">null</span>&amp;&amp;p2.next.val==p1.next.val)&#123;</span><br><span class="line">                p2=p2.next;</span><br><span class="line">                r=<span class="number">1</span>;<span class="comment">//如果有重复节点则r置为1</span></span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(r==<span class="number">1</span>)&#123;</span><br><span class="line">                p1.next=p2.next;<span class="comment">//删掉重复节点</span></span><br><span class="line">                p2=p2.next;<span class="comment">//再指针后移！！这时候p1不用动！</span></span><br><span class="line">                r=<span class="number">0</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                p1=p2;<span class="comment">//指针后移!p1,p2都向后移动一下</span></span><br><span class="line">                <span class="keyword">if</span>(p2.next!=<span class="keyword">null</span>)p2=p2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> no1.next;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="单链表逆转"><a href="#单链表逆转" class="headerlink" title="单链表逆转"></a><a href="https://leetcode-cn.com/problems/reverse-linked-list/" target="_blank" rel="noopener">单链表逆转</a></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;	<span class="comment">//双指针法</span></span><br><span class="line">        ListNode prev = <span class="keyword">null</span>;</span><br><span class="line">        ListNode curr = head;</span><br><span class="line">        <span class="keyword">while</span> (curr != <span class="keyword">null</span>) &#123;</span><br><span class="line">            ListNode nextTemp = curr.next;</span><br><span class="line">            curr.next = prev;</span><br><span class="line">            prev = curr;</span><br><span class="line">            curr = nextTemp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;	<span class="comment">//递归法</span></span><br><span class="line">    <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">    ListNode p = reverseList(head.next);</span><br><span class="line">    head.next.next = head;</span><br><span class="line">    head.next = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -370,8 +378,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/19/Josephus%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" rel="next" title="顺序表实现Josephus问题">
-                <i class="fa fa-chevron-left"></i> 顺序表实现Josephus问题
+              <a href="/2020/07/03/Java%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/" rel="next" title="Java注解与反射">
+                <i class="fa fa-chevron-left"></i> Java注解与反射
               </a>
             
           </div>
@@ -379,10 +387,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/06/23/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/" rel="prev" title="二叉树遍历">
-                二叉树遍历 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -436,8 +440,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -525,6 +538,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除排序链表重复元素"><span class="nav-number">1.</span> <span class="nav-text">删除排序链表重复元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除排序链表重复元素2"><span class="nav-number">2.</span> <span class="nav-text">删除排序链表重复元素2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单链表逆转"><span class="nav-number">3.</span> <span class="nav-text">单链表逆转</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
